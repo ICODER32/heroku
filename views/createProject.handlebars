@@ -1,0 +1,302 @@
+            <div class="carouselmodal hidden">
+          <button class="closeloginmodal bg-purple-100 absolute top-2 right-2">
+      <i class="fa-sharp fa-solid fa-xmark text-4xl text-blue-900"></i>
+    </button>
+      <div
+        class="w-full h-full absolute top-0 left-0"
+        style="backdrop-filter: blur(5px);z-index: 100000 !important;"
+      ></div>
+      <div
+        class="absolute rounded-lg px-10 py-10 top-20 w-11/12 md:w-10/12 mx-auto left-0 right-0"
+        style="z-index: 1000000000 !important;"
+      >
+        <button class="closecarouselmodal absolute right-0">
+          <i class="fa-sharp fa-solid fa-xmark text-4xl text-blue-900"></i>
+        </button>
+        <div class="w-full">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="https://www.youtube.com/watch?v=2gIVB2wGcQ4" target="_blank">
+                <img class="" src="https://i.imgur.com/ERQvHvY.jpg" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="https://sieraford.github.io/mood-mixer/" target="_blank">
+                <img src="https://i.imgur.com/BCiwuSa.jpg" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="https://www.youtube.com/watch?v=wPczXD5qwbE" target="_blank">
+                <img src="https://i.imgur.com/hnXgZWA.jpg" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="https://www.youtube.com/watch?v=jfKfPfyJRdk" target="_blank">
+                <img src="https://i.imgur.com/RKUvshJ.jpg" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+
+                <a href="https://www.buzzfeed.com/quizzes" target="_blank">
+                <img src="https://i.imgur.com/jXhL9OS.png" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="https://www.britannica.com/quiz/browse" target="_blank">
+                <img src="https://i.imgur.com/pqkEQ7b.jpg" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="https://www.pinterest.com/" target="_blank">
+                <img src="https://i.imgur.com/f21OcNl.jpg" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-button-next">
+              <i
+                class="fa-solid fa-circle-chevron-right text-brand-blue text-5xl"
+              ></i>
+            </div>
+            <div class="swiper-button-prev">
+              <i
+                class="fa-solid fa-circle-chevron-left text-brand-blue text-5xl"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <div class="relative bg-primary dark:bg-dark overflow-hidden max-h-screen">
+            <header class="right-0 top-0 left-60 bg-btn py-3 px-4 h-24">
+              <div class="max-w-4xl mx-auto">
+                <div class="flex flex-direction:column items-center justify-between">
+                  
+                  <button class="openbtn" onclick="openNav()">&#9776;</button>
+              <br>
+              <div class="text-lg font-bold">WORK WRANGLER</div>
+                  
+                  {{!-- Timer  --}}
+                    <div class="timer">
+    <div class="hour">00</div>:
+    <div class="minute">00</div>:
+    <div class="second">00</div>
+  </div>
+  <div id="start_btn" class="playpause">
+<p>Start Now!</p>
+  </div>
+                </div>
+              </div>
+            </header>
+          
+            <aside id='mySidebar' class="sidebar fixed inset-y-0 left-0 bg-white shadow-md max-h-screen w-auto">
+              <div class="flex flex-col justify-between h-full">
+                <div class="flex-grow">
+                  <div class="px-4 py-6 text-center border-b">
+                    <h1 class="text-xl font-bold leading-none"><span class="text-yellow-700">Menu</span></h1>
+                  </div>
+                  <div class="p-4">
+                    <ul class="space-y-1">
+                      <li>
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="/" class="flex items-center  hover:bg-btn rounded-xl font-bold text-sm text-blue-900 py-3 px-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-lg mr-4" viewBox="0 0 16 16">
+                            <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                          </svg>Dashboard
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)" class="flex  hover:bg-btn rounded-xl font-bold text-sm text-blue-900 py-3 px-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-lg mr-4" viewBox="0 0 16 16">
+                            <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+                          </svg>New Project
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/analytics" class="flex  hover:bg-btn rounded-xl font-bold text-sm text-blue-900 py-3 px-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-lg mr-4" viewBox="0 0 16 16">
+                            <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z"/>
+                          </svg>Analytics
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="opencarouselmodal flex  hover:bg-btn rounded-xl font-bold text-sm text-blue-900 py-3 px-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-lg mr-4" viewBox="0 0 16 16">
+                            <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                          </svg>Brain Break
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                 <a href="/api/users/logout">
+                <div class="p-4">
+                  <button id="logout_btn" type="button" class="inline-flex items-center justify-center h-9 px-4 rounded-xl bg-gray-900 text-gray-300 hover:text-white text-sm font-semibold transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="" viewBox="0 0 16 16">
+                      <path d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1h8zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                    </svg>
+                  </button> <span  class="font-bold text-sm ml-2">Logout</span>
+                </div>
+                  </a>
+              </div>
+            </aside>
+          
+            <main id='main' class=" page ml-60 pt-16 max-h-screen overflow-auto" id="Projects">
+              
+              <div class="px-6 py-8">
+                <div class="max-w-4xl mx-auto">
+                  <div class="bg-primary rounded-3xl p-8 mb-5">
+                    <h1 class="text-3xl font-bold mb-10">Dashboard</h1>
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-stretch">
+                        <div class="text-gray-400 text-xs">Resources<br></div>
+                        <div class="h-100 border-l mx-4"></div>
+                      
+                     
+                      </div>
+                      <div class="flex items-center gap-x-8 gap-y-4 grid-cols-3 ">
+                            </div>
+                            <a href="https://about.gitlab.com/" target="_blank" >
+                        <button type="button" class="inline-flex items-center justify-center h-9 px-3 rounded-xl border hover:border-gray-400 text-gray-800 hover:text-gray-900 transition">
+                          
+                            <i class="fa-brands fa-gitlab"></i>
+                               
+                        </button>
+                            </a>
+                        <a href="https://github.com/" target="_blank" >
+                        <button type="button" class="inline-flex items-center justify-center h-9 px-3 rounded-xl border hover:border-gray-400 text-gray-800 hover:text-gray-900 transition">
+                             <i class="fab fa-github"></i>
+                           
+                        </button>
+                        </a>
+                         <a href="https://stackoverflow.com/" target="_blank" >
+                        <button type="button" class="inline-flex items-center justify-center h-9 px-3 rounded-xl border hover:border-gray-400 text-gray-800 hover:text-gray-900 transition">
+                            <i class="fa-brands fa-stack-overflow"></i>
+                       
+                       </button>
+                         </a>
+                      </div>
+                    </div>
+          
+                 
+                 
+                 
+                    <h1 class="text-3xl font-bold mb-10 justify-center">Project Title</h1>
+                    <div class=" flex items-center justify-center"></div>
+                    <input id="project_title" class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Enter Title" type="text" />
+                 </div>
+                 <hr class="my-10">
+                 <h1 class="text-3xl font-bold mb-10 justify-center">Current Project</h1>
+                 <div class="flex items-center justify-center">
+                    <textarea id="work" class="text-3xl" placeholder="Start Work...." type="text"></textarea>
+                   
+
+                 </div>
+                 <div class="relative h-32 w-32 mb-28 ...">
+                    <div class="absolute bottom-0 right-0 h-16 w-16 ...">
+                        <button type="button" id="submitwork_btn" class=" py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Save</button>
+                    </div>
+                  </div>
+                  
+                
+              
+                      
+          
+                </div> 
+              </div>    
+            </main>
+       
+        
+<!-- JS File -->
+
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src=".js"></script>
+    <script>
+        
+const submitwork_btn = document.getElementById('submitwork_btn')
+const project_title=document.getElementById('project_title');
+const work=document.getElementById('work');
+const hours=document.querySelector('.hour')
+const minutes=document.querySelector('.minute')
+const seconds=document.querySelector('.second')
+
+const start_btn=document.getElementById('start_btn')
+
+var hr = 00;
+var min = 00;
+var sec = 00;
+var stoptime = true;
+var isPaused = false;
+
+async function startTimer() {
+    var timer = setInterval(() => {
+        if (!isPaused) {
+            sec = sec + 01;
+            if (sec >= 60) {
+                sec = 00;
+                min = min + 01;
+            }
+            if (min >= 60) {
+                hr = hr + 01
+                min = 00;
+            }
+            hours.innerHTML = hr<10?"0"+hr:hr
+            minutes.innerHTML = min<10?"0"+min:min
+            seconds.innerHTML = sec<10?"0"+sec:sec
+        }
+    }, 1000);
+}
+
+
+start_btn.addEventListener('click',()=>{
+    startTimer();
+    isPaused = false;
+})
+
+
+
+
+submitwork_btn.addEventListener('click', async(e) => {
+    const response=await fetch('/api/project',{
+        method:'post',
+        headers:{
+            'Content-type':'application/json'
+        },
+        body:JSON.stringify({
+            name:project_title.value,
+            description:work.value,
+            hr,min,sec
+
+        })
+    })
+if(response){
+    alert('Project Created')
+    window.location.href='/'
+}
+})
+
+function openNav() {
+  document.getElementById('mySidebar').style.width = '250px';
+  document.getElementById('main').style.marginLeft = '250px';
+}
+
+function closeNav() {
+  document.getElementById('mySidebar').style.width = '0px';
+  document.getElementById('main').style.marginLeft = '0px';
+}
+    </script>
+
+        <script src="./js/script2.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+></script>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+></script>
+<script src="/js/javascript.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+  defer
+></script>

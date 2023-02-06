@@ -1,0 +1,299 @@
+body {
+
+  margin: 0;
+  overflow: hidden;
+  filter: invert(0);
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bg-modal {
+  /* From https://css.glass */
+  background: rgba(89, 16, 148, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.4px);
+  -webkit-backdrop-filter: blur(11.4px);
+  /*border: 1px solid rgba(255, 255, 255, 1);*/
+}
+
+.btn {
+  /* reset */
+
+  border: 0;
+  outline: 0;
+  /* styles */
+  position: relative;
+  background: linear-gradient(-45deg, #281daa, #093d5d, #161a72, #623ecf, #453372);
+  background-size: 400% 400%;
+  animation: gradientBG 4.5s ease infinite;
+  padding: 1.5rem 7rem;
+  /*color: black;*/
+
+
+  transition: .3s;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.gradient {
+  background: #8b11ce;
+  background: -webkit-linear-gradient(to right, #2793d7, #780687, #970ab7);
+  background: linear-gradient(to right, #06bde7, #bf0dec, #8A2387);
+
+  -webkit-background-clip: text;
+
+
+
+
+
+  color: transparent;
+}
+
+
+/*page 2 sidebar*/
+
+/* bg 2 page*/
+::-webkit-scrollbar {
+  width: .5rem;
+  height: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, .3);
+}
+
+/*dashbord btn*/
+
+textarea {
+  width: 600px;
+  height: 450px;
+}
+
+/* droupdown*/
+
+.timer {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.playpause {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .5s linear;
+}
+
+.playpause:hover {
+  color: #fff;
+  background-color: blue;
+}
+
+.container {
+  display: inline-block;
+  margin-top: 50px;
+  position: relative;
+  left: 150px;
+  width: 60%;
+  height: 500px;
+}
+
+@media screen and (min-width: 375px) {
+  .fixed {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .fixed {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fixed {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .fixed {
+    display: flex;
+  }
+}
+
+/* The sidebar menu */
+.sidebar {
+  visibility: hidden;
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%) !important;
+  overflow-x: auto;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidebar */
+}
+
+
+
+
+/* When you mouse over the navigation links, change their color */
+
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.closebtn:hover {
+  color: #c20a0a;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #F8FF33;
+  color: #F0EFF4;
+  padding: 10px 15px;
+  border: none;
+
+}
+
+.openbtn:hover {
+  background-color: #033F63;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+  }
+
+
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 500px !important;
+  height: 400px !important;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-button-disabled {
+  opacity: 1 !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: none !important;
+}
+
+
+
+/*======================
+    404 page
+=======================*/
+
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: 'Arvo', serif;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+.contant_box_404 {
+  margin-top: -50px;
+}

@@ -1,0 +1,164 @@
+<!-- Login Modal -->
+<div class="loginmodal hidden">
+  <div class="z-30 w-full h-full absolute top-0 left-0"></div>
+
+  <div
+    class="absolute rounded-lg px-4 sm:px-10 py-10 top-20 w-11/12 md:w-5/12 z-50 mx-auto left-0 right-0 bg-modal"
+    style="z-index: 1000000000 !important;"
+  >
+    <button class="closeloginmodal absolute top-5 right-5">
+      <i class="fa-sharp fa-solid fa-xmark text-4xl text-white"></i>
+    </button>
+    <div class="flex justify-between gap-5 sm:gap-10 w-full">
+      <!-- Login -->
+      <form id="login" class="w-full" action="/api/users/login" method="POST">
+        <p class="mt-5 font-medium text-4xl text-white text-center">Login</p>
+        <input type="hidden" name="remember" value="true" />
+        <div class="mt-5 space-y-4 rounded-md shadow-sm w-full">
+          <div class="">
+            <input
+              id="email-address"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              class="mt-1 relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              placeholder="Email address"
+            />
+          </div>
+          <div>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              class="mt-2 relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              placeholder="Password"
+            />
+          </div>
+        </div>
+        <div>
+          <button
+            type="submit"
+            class="mt-16 group relative flex w-full justify-center rounded-md border border-transparent bg-white py-2 px-4 text-lg font-medium text-black font-medium focus:outline-none"
+          >
+            Login
+          </button>
+        </div>
+      </form>
+      <!-- SIgnin -->
+      <form id="signin" class="w-full" action="/api/users" method="POST">
+        <p class="mt-5 font-medium text-4xl text-white text-center">Sign Up</p>
+        <input type="hidden" name="remember" value="true" />
+        <div class="mt-5 space-y-4 rounded-md shadow-sm">
+          <div>
+            <input
+              id="name"
+              name="name"
+              type="name"
+              autocomplete="name"
+              required
+              class="mt-1 relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              placeholder="Name"
+            />
+          </div>
+          <div>
+            <input
+              id="email-address"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              class="mt-1 relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              placeholder="Email address"
+            />
+          </div>
+          <div>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              class="mt-2 relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              placeholder="Password"
+            />
+          </div>
+        </div>
+        <div>
+          <button
+            type="submit"
+            class="mt-3.5 group relative flex w-full justify-center rounded-md border border-transparent bg-white py-2 px-4 text-lg font-medium text-black font-medium focus:outline-none"
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--bg aminated-->
+<canvas></canvas>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.0/TweenMax.min.js"
+></script>
+<!--<div class="z-30 w-full h-full absolute top-0 left-0">-->
+<!-- Login Modal -->
+
+<!--content -->
+<section>
+  <div
+    class="top-40 md:top-30 relative z-50 lg:w-3/5 mx-auto text-center py-8 border-1 border-black rounded-lg px-4 sm:px-5 bg-modal"
+  >
+    <!-- Login btn -->
+    <div class="flex justify-end">
+
+      <button
+        class="btn openloginmodal ml-auto font-bold rounded-full text-2xl text-login"
+      >Login</button>
+    </div>
+    <!-- main -->
+    <div class="mt-5 px-5">
+      <h1 class="gradient text-5xl font-semibold">WORK WRANGLER</h1>
+      <p class="gradient mt-6 text-base sm:text-lg font-normal"> 
+        A project management tool.
+    </div>
+    <div class="flex justify-between gap-5 px-4 md:px-16 mt-10">
+      <div>
+        <a
+          href="https://github.com/Mary90272"
+          class="font-semibold fa-brands fa-github github fa-2xl"
+        ></a>
+      </div>
+      <div>
+        <a
+          href="https://github.com/laboettcher"
+          class="font-semibold fa-brands fa-github fa-2xl"
+        ></a>
+      </div>
+      <div>
+        <a
+          href="https://github.com/VulnusR"
+          class="font-semibold fa-brands fa-github fa-2xl"
+        ></a>
+      </div>
+      <div>
+        <a
+          href="https://github.com/srlevit94"
+          class="font-semibold fa-brands fa-github fa-2xl"
+        ></a>
+      </div>
+      <div>
+        <a
+          href="https://github.com/marsmeshed"
+          class="font-semibold fa-brands fa-github fa-2xl"
+        ></a>
+      </div>
+    </div>
+  </div>
+
+</section>

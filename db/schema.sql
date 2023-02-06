@@ -1,0 +1,1 @@
+CREATE DATABASE dailywork_db;
