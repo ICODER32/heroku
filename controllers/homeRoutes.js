@@ -38,6 +38,10 @@ router.get("/analytics", auth, async (req, res) => {
     }
 });
 
+router.get('/data', (req, res) => {
+    res.send('hello')
+})
+
 router.get('/funtime', auth, (req, res) => {
     res.render('funtime')
 })
