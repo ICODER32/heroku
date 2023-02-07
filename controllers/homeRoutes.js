@@ -30,8 +30,12 @@ router.get("/", auth, async (req, res) => {
 
 
 router.get("/analytics", auth, async (req, res) => {
+    try {
+        res.render('Analytics', { loggedIn: req.session.logged_in, user_id: req.session.user_id })
 
-    res.render('Analytics', { loggedIn: req.session.logged_in, user_id: req.session.user_id })
+    } catch (error) {
+        res.send(error)
+    }
 });
 
 router.get('/funtime', auth, (req, res) => {
