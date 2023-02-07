@@ -17,7 +17,7 @@ router.post('/', withAuth, async (req, res) => {
         // res.redirect('/');
         res.status(200).json(newProject);
     } catch (err) {
-        res.status(400).json(err);
+        res.status(400).render('error');
     }
 });
 
@@ -30,7 +30,7 @@ router.get('/delete/:id', withAuth, async (req, res) => {
         });
 
         if (!projectData) {
-            res.status(404).json({ message: 'No project found with this id!' });
+            res.status(400).render('error');
             return;
         }
         res.redirect('/');
@@ -55,14 +55,13 @@ router.put('/:id', withAuth, (req, res) => {
     )
         .then((projectData) => {
             if (!projectData) {
-                res.status(404).json({ message: "No project found with this id" });
+                res.status(400).render('error');
                 return;
             }
             res.json(projectData);
         })
         .catch((err) => {
-            console.log(err);
-            res.status(500).json(err);
+            res.status(400).render('error');
         });
 });
 router.get('/projects', async (req, res) => {
@@ -89,7 +88,7 @@ router.get('/projects', async (req, res) => {
         });
         res.status(200).send({ time: projectTimes, name: projectNames })
     } catch (error) {
-        res.status(500).json({ message: error })
+        res.status(400).render('error');
     }
 
 })

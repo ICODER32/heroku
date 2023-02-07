@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
             res.status(200).redirect('/');
         });
     } catch (err) {
-        res.status(400).json(err);
+        res.status(400).render('error');
     }
 });
 
@@ -21,18 +21,14 @@ router.post('/login', async (req, res) => {
         const userData = await User.findOne({ where: { email: req.body.email } });
 
         if (!userData) {
-            res
-                .status(400)
-                .json({ message: 'Incorrect email or password, please try again' });
+            res.status(400).render('error');
             return;
         }
 
         const validPassword = await userData.checkPassword(req.body.password);
 
         if (!validPassword) {
-            res
-                .status(400)
-                .json({ message: 'Incorrect email or password, please try again' });
+            res.status(400).render('error');
             return;
         }
 
@@ -44,7 +40,7 @@ router.post('/login', async (req, res) => {
         });
 
     } catch (err) {
-        res.status(400).json(err);
+        res.status(400).render('error');
     }
 });
 
@@ -56,10 +52,10 @@ router.get('/logout', (req, res) => {
                 res.status(204).redirect('/login');
             });
         } else {
-            res.status(404).end();
+            res.status(400).render('error');
         }
     } catch (error) {
-        console.log(error)
+        res.status(400).render('error');
     }
 
 });
