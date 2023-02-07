@@ -31,7 +31,7 @@ router.get("/", auth, async (req, res) => {
 
 router.get("/analytics", auth, async (req, res) => {
     try {
-        res.render('Analytics')
+        res.render('analytics')
 
     } catch (error) {
         res.send(error)
@@ -39,7 +39,7 @@ router.get("/analytics", auth, async (req, res) => {
 });
 
 router.get('/data', (req, res) => {
-    res.send('hello')
+    res.send('analytics')
 })
 
 router.get('/funtime', auth, (req, res) => {
